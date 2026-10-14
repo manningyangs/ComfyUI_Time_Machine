@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ComfyUI Time Machine local output
+*.report.json
+reports/
+scan_output/
+*.log
+scan_report_*.json
+
+# Snapshot storage (NEVER commits real snapshot data)
+data/
+*.sqlite3
+*.db
+
+# Test artifacts
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local temp scripts
+_debug_*.py
+_test_*.py
+_gc_test.py
+scan_report*.json
+
+# Local secrets / env
+.env
+.env.local
+
+# User-local config (contains personal paths)
+settings.json
+
+# PyInstaller cache
+*.manifest
+*.spec.bak
+pyinstaller_build/

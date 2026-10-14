@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfyui-time-machine"
+version = "0.1.0"
+description = "Windows ComfyUI Portable 只读环境扫描器（v0.1 — 仅扫描）"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "ComfyUI Time Machine Contributors" }]
+keywords = ["comfyui", "backup", "snapshot", "windows"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Archiving :: Backup",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4",
+]
+gui = [
+    "PySide6>=6.6",
+]
+build = [
+    "pyinstaller>=6.0",
+]
+
+[project.scripts]
+comfyui-time-machine = "comfyui_time_machine.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP"]
