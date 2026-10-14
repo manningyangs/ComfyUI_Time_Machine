@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "comfyui-time-machine"
 version = "0.1.0"
-description = "Windows ComfyUI Portable 只读环境扫描器（v0.1 — 仅扫描）"
+description = "Scan, snapshot, diff, and restore Windows ComfyUI Portable environments."
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "ComfyUI Time Machine Contributors" }]
